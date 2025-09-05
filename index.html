@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Acción Masónica: Mi Trazado Sarmientino</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e8eaf6; /* Un tono azulado/grisáceo claro */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #workshop-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 900px;
+            padding: 32px;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #1a237e; /* Azul oscuro masónico */
+            border-bottom: 2px solid #c5cae9;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .action-block {
+            margin-bottom: 30px;
+        }
+        .action-block label {
+            display: block;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #3f51b5; /* Azul índigo */
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 100px;
+        }
+        textarea:focus {
+            border-color: #3f51b5;
+            outline: none;
+            box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+        }
+        #submit-btn, #print-btn {
+            font-family: 'Roboto', sans-serif;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        #submit-btn:hover, #print-btn:hover {
+            background-color: #303f9f;
+        }
+        #summary-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #c5cae9;
+            margin-top: 30px;
+            background-color: #fafafa;
+        }
+        #summary h3 {
+            color: #1a237e;
+            border-bottom: 1px dotted #7986cb;
+            padding-bottom: 8px;
+        }
+        #summary p {
+            white-space: pre-wrap; /* Mantiene los saltos de línea del usuario */
+            font-style: italic;
+        }
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            #workshop-container, #action-plan-form, #submit-btn, #print-btn, h1, #intro-p {
+                display: none;
+            }
+            #summary-container {
+                display: block;
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="workshop-container">
+        <h1>Taller de Acción Masónica</h1>
+        <p id="intro-p">Q∴ H∴, este no es un examen, sino un taller de trabajo personal. Inspirados por el Trazado de nuestro Q∴ H∴ Sarmiento, te invitamos a reflexionar sobre cómo podemos ser constructores en nuestro propio tiempo y comunidad. Dedica un momento a trazar tus propias líneas de acción. Al finalizar, podrás generar e imprimir tu compromiso personal.</p>
+        
+        <form id="action-plan-form">
+            <div class="action-block">
+                <label for="action-education">Pilar 1: La Lucha contra la Ignorancia (Educación y Verdad)</label>
+                <p>Sarmiento combatió la "barbarie" con escuelas y libros. Nuestra "barbarie" moderna es la desinformación, el prejuicio y la apatía. ¿Qué acción concreta puedes realizar en tu entorno para promover el conocimiento, el pensamiento crítico o ser un faro de verdad?</p>
+                <textarea id="action-education" placeholder="Ej: Ser mentor de un estudiante, organizar un club de lectura, verificar y compartir información de calidad, iniciar conversaciones constructivas en mi familia sobre temas complejos..."></textarea>
+            </div>
+            
+            <div class="action-block">
+                <label for="action-unity">Pilar 2: Unir lo que está Disperso (Fraternidad y Diálogo)</label>
+                <p>Sarmiento soñó con una 'Argirópolis' para unir a la Nación. Hoy, nuestra sociedad está agrietada por la discordia. ¿Cómo puedes actuar como un 'Centro de la Unión' en tu comunidad para tender puentes entre personas que piensan distinto y sanar divisiones?</p>
+                <textarea id="action-unity" placeholder="Ej: Participar activamente en una asociación vecinal, fomentar el diálogo respetuoso en redes sociales, organizar un evento que junte a diferentes grupos de mi comunidad, escuchar activamente a quienes tienen posturas opuestas a la mía..."></textarea>
+            </div>
+            
+            <div class="action-block">
+                <label for="action-progress">Pilar 3: Ser un Arquitecto del Progreso (Acción Comunitaria)</label>
+                <p>El verdadero taller del Masón es la comunidad. Sarmiento llenó el país de obras. ¿Qué proyecto tangible, por pequeño que sea, podrías iniciar o al que podrías sumarte para mejorar materialmente tu entorno inmediato?</p>
+                <textarea id="action-progress" placeholder="Ej: Colaborar en la limpieza de una plaza, donar tiempo a un comedor u hospital, proponer una mejora concreta en mi edificio, calle o barrio, apoyar a un emprendedor local..."></textarea>
+            </div>
+        </form>
+
+        <button id="submit-btn">Generar mi Trazado de Acción</button>
+
+        <div id="summary-container">
+            <h2>Mi Trazado Personal de Acción</h2>
+            <p><em>Basado en los principios de la obra de nuestro Q∴ H∴ Domingo Faustino Sarmiento, este es mi compromiso como constructor en el mundo de hoy.</em></p>
+            <div id="summary"></div>
+            <button id="print-btn">Imprimir mi Compromiso</button>
+        </div>
+    </div>
+
+    <script>
+        const submitButton = document.getElementById('submit-btn');
+        const printButton = document.getElementById('print-btn');
+        const form = document.getElementById('action-plan-form');
+        const summaryContainer = document.getElementById('summary-container');
+        const summaryContent = document.getElementById('summary');
+
+        submitButton.addEventListener('click', () => {
+            const educationAction = document.getElementById('action-education').value;
+            const unityAction = document.getElementById('action-unity').value;
+            const progressAction = document.getElementById('action-progress').value;
+
+            if (!educationAction && !unityAction && !progressAction) {
+                alert("Q∴ H∴, para generar tu Trazado, por favor completa al menos uno de los pilares de acción.");
+                return;
+            }
+
+            summaryContent.innerHTML = `
+                <h3>Mi Compromiso con la Educación y la Verdad:</h3>
+                <p>${educationAction || "No se ha especificado acción en este pilar."}</p>
+                <h3>Mi Compromiso con la Fraternidad y el Diálogo:</h3>
+                <p>${unityAction || "No se ha especificado acción en este pilar."}</p>
+                <h3>Mi Compromiso con la Acción Comunitaria:</h3>
+                <p>${progressAction || "No se ha especificado acción en este pilar."}</p>
+            `;
+
+            form.style.display = 'none';
+            submitButton.style.display = 'none';
+            document.getElementById('intro-p').style.display = 'none';
+            document.querySelector('h1').textContent = 'Trazado Generado';
+            summaryContainer.style.display = 'block';
+        });
+
+        printButton.addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+</body>
+</html>
